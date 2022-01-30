@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vikasojha.quizbee">
+    package="com.example.lomba.quizku">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.lomba.quizku.MainActivity"
             android:theme="@style/NoBar"
             android:exported="true">
             <intent-filter>
@@ -19,38 +19,38 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QuestionsActivity"
+            android:name="com.example.lomba.quizku.QuestionsActivity"
             android:theme="@style/Soal">
 
         </activity>
 
         <activity
-            android:name=".ResultActivity"
+            android:name="com.example.lomba.quizku.ResultActivity"
             android:theme="@style/NoBar"
             ></activity>
         <activity
-            android:name=".metikActivity"
+            android:name="com.example.lomba.quizku.metikActivity"
             android:theme="@style/NoBar"
             />
 
         <activity
-            android:name=".ipaActivity"
+            android:name="com.example.lomba.quizku.ipaActivity"
             android:theme="@style/NoBar"
             />
         <activity
-            android:name=".resultmetikActivity"
+            android:name="com.example.lomba.quizku.resultmetikActivity"
             android:theme="@style/NoBar"
             />
         <activity
-            android:name=".resultipaActivity"
+            android:name="com.example.lomba.quizku.resultipaActivity"
             android:theme="@style/NoBar"
             />
         <activity
-            android:name=".bindoActivity"
+            android:name="com.example.lomba.quizku.bindoActivity"
             android:theme="@style/NoBar"
             />
         <activity
-            android:name=".resultbindoActivity"
+            android:name="com.example.lomba.quizku.resultbindoActivity"
             android:theme="@style/NoBar"
             />
     </application>

@@ -1,4 +1,4 @@
-package com.example.vikasojha.quizbee;
+package com.example.lomba.quizku;
 import android.graphics.Color;
 /**
  * Created by Sushant on 23-11-2016.

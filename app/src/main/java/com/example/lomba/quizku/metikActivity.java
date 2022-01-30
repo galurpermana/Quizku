@@ -1,4 +1,4 @@
-package com.example.vikasojha.quizbee;
+package com.example.lomba.quizku;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,43 +11,43 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuestionsActivity extends AppCompatActivity {
+public class metikActivity extends AppCompatActivity {
     TextView tv;
     Button submitbutton, quitbutton;
     RadioGroup radio_g;
     RadioButton rb1,rb2,rb3,rb4;
 
     String questions[] = {
-                            "Apa motto Kota Balikpapan?",
-                            "Apa nama latin beruang madu?",
-                            "Sumber air baku PDAM Kota Balikpapan adalah?",
-                            "Hutan lindung sungai Wain terletak di?",
-                            "Dimana letak waduk manggar?",
-                            "Hutan Kalimantan merupakan paru-paru dunia karena menghasilkan …",
-                            "Adipura adalah penghargaan pemerintah pusat yang diberikan kepada kota Balikpapan dalam bidang …",
-                            "Dibawah ini adalah cara pengolahan sampah, Kecuali?",
-                            "Selain dapat menciptakan udara segar, tumbuhan dapat menahan dan menyimpan ?",
-                            "Air yang bersih bisa kita peroleh dengan cara?"
-                         };
-    String answers[] = {"BERIMAN","Helarctos malaynus","Waduk Manggar","KM.15","KM.12","Oksigen","Kebersihan","Penghijauan","Air","Menggali tanah pada lapisan bagian bawah"};
+            "tujuh belas jika ditulis angka yaitu",
+            "(1+5)-2=",
+            "(2+1)+(5-3)=",
+            "(1+21)-(5-5)=",
+            "5, 7, 6, 8 urutkan bilangan tersebut dari yang terkecil",
+            "1, 19, 22, 50 Bilangan yang paling besar adalah..",
+            "Yunda memilikii 8 bunga,  Nadsya memiliki 12 bunga Berarti bunga Yunda lebih …. dari bunga Nadsya",
+            "15 pencil + 6 pencil =",
+            "Angka di antara 14 dan 16 adalah...",
+            "Terdapat 12 kambing, 9 ayam, 10 ikan dan 11 kuda di ladang, Urutan hewan yang paling terendah adalah.."
+    };
+    String answers[] = {"17","4","5","22","5-6-7-8","50","Sedikit","21 pencil","15","Ayam-Ikan-Kuda-Kambing"};
     String opt[] = {
-                    "BERSINAR","BERIMAN","BERSATU","BERSAMA",
-                    "Melursus ursinus","Elephas maximus","Ursus thibetanus","Helarctos malaynus",
-                    "Waduk Manggar","Laut","Sungai","Pantai",
-                    "KM.12","KM.15","Teritip","Kelurahan Telagasari",
-                    "KM.15","KM.23","KM.12","Kelurahan Prapatan",
-                    "Kayu","Rotan","Oksigen","Batu Bara",
-                    "Kenyamanan","Keanggunan","Keindahan","Kebersihan",
-                    "Daur ulang","Pengomposan","Penghijauan","Pembakaran",
-                    "Air","Oksigen","Emas","Karbondioksida",
-                     "Mengambil air di sungai","Menggali tanah pada lapisan bagian bawah"," Menggali pasir pada lapisan bawah tanah","Menggali tanah"
-                   };
+            "17","117","71","171",
+            "9","5","4","3",
+            "7","6","4","5",
+            "5","21","22","5",
+            "5-6-8-7","5-6-7-8","4-5-6-7-8","6-5-7-8",
+            "22","1","50","19",
+            "Banyak","Sedikit","Sama dengan","Besar",
+            "22 pencil","19 pencil","21 pencil","20 pencil",
+            "12","13","14","15",
+            "Ikan-Ayam-Kuda-Kambing","Kambing-Kuda-Ikan-Kambing","Kuda-Ikan-Ayam-Kambing","Ayam-Ikan-Kuda-Kambing"
+    };
     int flag=0;
     public static int marks=0,correct=0,wrong=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questions);
+        setContentView(R.layout.activity_metik);
 
         final TextView score = (TextView)findViewById(R.id.textView4);
         TextView textView=(TextView)findViewById(R.id.DispName);
@@ -57,7 +57,7 @@ public class QuestionsActivity extends AppCompatActivity {
         if (name.trim().equals(""))
             textView.setText("Halo User");
         else
-        textView.setText("Halo " + name);
+            textView.setText("Halo " + name);
 
         submitbutton=(Button)findViewById(R.id.button3);
         quitbutton=(Button)findViewById(R.id.buttonquit);
@@ -112,7 +112,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 else
                 {
                     marks=correct;
-                    Intent in = new Intent(getApplicationContext(),ResultActivity.class);
+                    Intent in = new Intent(getApplicationContext(),resultmetikActivity.class);
                     startActivity(in);
                 }
                 radio_g.clearCheck();
@@ -122,7 +122,7 @@ public class QuestionsActivity extends AppCompatActivity {
         quitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),ResultActivity.class);
+                Intent intent=new Intent(getApplicationContext(),resultmetikActivity.class);
                 startActivity(intent);
             }
         });

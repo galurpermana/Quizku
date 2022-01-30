@@ -1,4 +1,4 @@
-package com.example.vikasojha.quizbee;
+package com.example.lomba.quizku;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,43 +11,43 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class metikActivity extends AppCompatActivity {
+public class bindoActivity extends AppCompatActivity {
     TextView tv;
     Button submitbutton, quitbutton;
     RadioGroup radio_g;
     RadioButton rb1,rb2,rb3,rb4;
 
     String questions[] = {
-            "tujuh belas jika ditulis angka yaitu",
-            "(1+5)-2=",
-            "(2+1)+(5-3)=",
-            "(1+21)-(5-5)=",
-            "5, 7, 6, 8 urutkan bilangan tersebut dari yang terkecil",
-            "1, 19, 22, 50 Bilangan yang paling besar adalah..",
-            "Yunda memilikii 8 bunga,  Nadsya memiliki 12 bunga Berarti bunga Yunda lebih …. dari bunga Nadsya",
-            "15 pencil + 6 pencil =",
-            "Angka di antara 14 dan 16 adalah...",
-            "Terdapat 12 kambing, 9 ayam, 10 ikan dan 11 kuda di ladang, Urutan hewan yang paling terendah adalah.."
+            "Ibu membersihkan lantai dengan...",
+            "Huruf kapital a adalah...",
+            "Ayah mendengarkan radio dengan...",
+            "Saat berpisah dengan teman, ktia mengucapkan...",
+            "Rumahku bersih karena sering...",
+            "Kucing itu bersuara...",
+            "Membuang sampah harus di...",
+            "Andi belum makan, maka Andi merasa...",
+            "Ibu membeli ... di apotek.",
+            "Binatang  yang bisa merayap adalah..."
     };
-    String answers[] = {"17","4","5","22","5-6-7-8","50","Sedikit","21 pencil","15","Ayam-Ikan-Kuda-Kambing"};
+    String answers[] = {"Sapu","A","Telinga","Sampai jumpa","Dibersihkan","Mengeong","Tempat sampah","Lapar","Obat","Ayam-Ikan-Kuda-Kambing"};
     String opt[] = {
-            "17","117","71","171",
-            "9","5","4","3",
-            "7","6","4","5",
-            "5","21","22","5",
-            "5-6-8-7","5-6-7-8","4-5-6-7-8","6-5-7-8",
-            "22","1","50","19",
-            "Banyak","Sedikit","Sama dengan","Besar",
-            "22 pencil","19 pencil","21 pencil","20 pencil",
-            "12","13","14","15",
-            "Ikan-Ayam-Kuda-Kambing","Kambing-Kuda-Ikan-Kambing","Kuda-Ikan-Ayam-Kambing","Ayam-Ikan-Kuda-Kambing"
+            "Pulpen","Sapu","Sula","Tas",
+            "A","R","P","J",
+            "Mata","Alis","Telinga","Tangan",
+            "Terimakasih","Sampai jumpa","Apa kabar?","Selamat pagi",
+            "Dibersihkan","Dikotori","Dibiarkan","Dirusak",
+            "Berkicau","Mengaum","Berkokok","Mengeong",
+            "Tempat sampah","Sungai","Jalanan","Halaman",
+            "Lapar","Kenyang","Sedih","Senang",
+            "Baju","Obat","Kentang","Roti",
+            "Kucing","Katak","Cicak","Kadal"
     };
     int flag=0;
     public static int marks=0,correct=0,wrong=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_metik);
+        setContentView(R.layout.activity_bindo);
 
         final TextView score = (TextView)findViewById(R.id.textView4);
         TextView textView=(TextView)findViewById(R.id.DispName);
@@ -112,7 +112,7 @@ public class metikActivity extends AppCompatActivity {
                 else
                 {
                     marks=correct;
-                    Intent in = new Intent(getApplicationContext(),resultmetikActivity.class);
+                    Intent in = new Intent(getApplicationContext(),resultbindoActivity.class);
                     startActivity(in);
                 }
                 radio_g.clearCheck();
@@ -122,7 +122,7 @@ public class metikActivity extends AppCompatActivity {
         quitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),resultmetikActivity.class);
+                Intent intent=new Intent(getApplicationContext(),resultbindoActivity.class);
                 startActivity(intent);
             }
         });

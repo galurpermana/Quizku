@@ -1,4 +1,4 @@
-package com.example.vikasojha.quizbee;
+package com.example.lomba.quizku;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class resultbindoActivity extends AppCompatActivity {
+public class resultipaActivity extends AppCompatActivity {
     TextView tv, tv2, tv3;
     Button btnRestart;
 
@@ -23,17 +23,17 @@ public class resultbindoActivity extends AppCompatActivity {
         btnRestart = (Button) findViewById(R.id.btnRestart);
 
         StringBuffer sb = new StringBuffer();
-        sb.append("Jawaban benar: " + bindoActivity.correct + "\n");
+        sb.append("Jawaban benar: " + ipaActivity.correct + "\n");
         StringBuffer sb2 = new StringBuffer();
-        sb2.append("Jawaban salah: " + bindoActivity.wrong + "\n");
+        sb2.append("Jawaban salah: " + ipaActivity.wrong + "\n");
         StringBuffer sb3 = new StringBuffer();
-        sb3.append("Total Nilai: " + bindoActivity.correct + "\n");
+        sb3.append("Total Nilai: " + ipaActivity.correct + "\n");
         tv.setText(sb);
         tv2.setText(sb2);
         tv3.setText(sb3);
 
-        bindoActivity.correct=0;
-        bindoActivity.wrong=0;
+        ipaActivity.correct=0;
+        ipaActivity.wrong=0;
 
 
 

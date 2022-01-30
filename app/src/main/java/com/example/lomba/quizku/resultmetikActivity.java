@@ -1,4 +1,4 @@
-package com.example.vikasojha.quizbee;
+package com.example.lomba.quizku;
 
 import android.content.Intent;
 import android.os.Bundle;
