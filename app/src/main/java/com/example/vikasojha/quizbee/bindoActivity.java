@@ -11,43 +11,43 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuestionsActivity extends AppCompatActivity {
+public class bindoActivity extends AppCompatActivity {
     TextView tv;
     Button submitbutton, quitbutton;
     RadioGroup radio_g;
     RadioButton rb1,rb2,rb3,rb4;
 
     String questions[] = {
-                            "Apa motto Kota Balikpapan?",
-                            "Apa nama latin beruang madu?",
-                            "Sumber air baku PDAM Kota Balikpapan adalah?",
-                            "Hutan lindung sungai Wain terletak di?",
-                            "Dimana letak waduk manggar?",
-                            "Hutan Kalimantan merupakan paru-paru dunia karena menghasilkan …",
-                            "Adipura adalah penghargaan pemerintah pusat yang diberikan kepada kota Balikpapan dalam bidang …",
-                            "Dibawah ini adalah cara pengolahan sampah, Kecuali?",
-                            "Selain dapat menciptakan udara segar, tumbuhan dapat menahan dan menyimpan ?",
-                            "Air yang bersih bisa kita peroleh dengan cara?"
-                         };
-    String answers[] = {"BERIMAN","Helarctos malaynus","Waduk Manggar","KM.15","KM.12","Oksigen","Kebersihan","Penghijauan","Air","Menggali tanah pada lapisan bagian bawah"};
+            "Ibu membersihkan lantai dengan...",
+            "Huruf kapital a adalah...",
+            "Ayah mendengarkan radio dengan...",
+            "Saat berpisah dengan teman, ktia mengucapkan...",
+            "Rumahku bersih karena sering...",
+            "Kucing itu bersuara...",
+            "Membuang sampah harus di...",
+            "Andi belum makan, maka Andi merasa...",
+            "Ibu membeli ... di apotek.",
+            "Binatang  yang bisa merayap adalah..."
+    };
+    String answers[] = {"Sapu","A","Telinga","Sampai jumpa","Dibersihkan","Mengeong","Tempat sampah","Lapar","Obat","Ayam-Ikan-Kuda-Kambing"};
     String opt[] = {
-                    "BERSINAR","BERIMAN","BERSATU","BERSAMA",
-                    "Melursus ursinus","Elephas maximus","Ursus thibetanus","Helarctos malaynus",
-                    "Waduk Manggar","Laut","Sungai","Pantai",
-                    "KM.12","KM.15","Teritip","Kelurahan Telagasari",
-                    "KM.15","KM.23","KM.12","Kelurahan Prapatan",
-                    "Kayu","Rotan","Oksigen","Batu Bara",
-                    "Kenyamanan","Keanggunan","Keindahan","Kebersihan",
-                    "Daur ulang","Pengomposan","Penghijauan","Pembakaran",
-                    "Air","Oksigen","Emas","Karbondioksida",
-                     "Mengambil air di sungai","Menggali tanah pada lapisan bagian bawah"," Menggali pasir pada lapisan bawah tanah","Menggali tanah"
-                   };
+            "Pulpen","Sapu","Sula","Tas",
+            "A","R","P","J",
+            "Mata","Alis","Telinga","Tangan",
+            "Terimakasih","Sampai jumpa","Apa kabar?","Selamat pagi",
+            "Dibersihkan","Dikotori","Dibiarkan","Dirusak",
+            "Berkicau","Mengaum","Berkokok","Mengeong",
+            "Tempat sampah","Sungai","Jalanan","Halaman",
+            "Lapar","Kenyang","Sedih","Senang",
+            "Baju","Obat","Kentang","Roti",
+            "Kucing","Katak","Cicak","Kadal"
+    };
     int flag=0;
     public static int marks=0,correct=0,wrong=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questions);
+        setContentView(R.layout.activity_bindo);
 
         final TextView score = (TextView)findViewById(R.id.textView4);
         TextView textView=(TextView)findViewById(R.id.DispName);
@@ -57,7 +57,7 @@ public class QuestionsActivity extends AppCompatActivity {
         if (name.trim().equals(""))
             textView.setText("Halo User");
         else
-        textView.setText("Halo " + name);
+            textView.setText("Halo " + name);
 
         submitbutton=(Button)findViewById(R.id.button3);
         quitbutton=(Button)findViewById(R.id.buttonquit);
@@ -112,7 +112,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 else
                 {
                     marks=correct;
-                    Intent in = new Intent(getApplicationContext(),ResultActivity.class);
+                    Intent in = new Intent(getApplicationContext(),resultbindoActivity.class);
                     startActivity(in);
                 }
                 radio_g.clearCheck();
@@ -122,7 +122,7 @@ public class QuestionsActivity extends AppCompatActivity {
         quitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),ResultActivity.class);
+                Intent intent=new Intent(getApplicationContext(),resultbindoActivity.class);
                 startActivity(intent);
             }
         });

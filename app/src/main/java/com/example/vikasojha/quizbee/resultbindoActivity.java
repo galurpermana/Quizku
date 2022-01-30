@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ResultActivity extends AppCompatActivity {
+public class resultbindoActivity extends AppCompatActivity {
     TextView tv, tv2, tv3;
     Button btnRestart;
 
@@ -23,17 +23,17 @@ public class ResultActivity extends AppCompatActivity {
         btnRestart = (Button) findViewById(R.id.btnRestart);
 
         StringBuffer sb = new StringBuffer();
-        sb.append("Jawaban benar: " + QuestionsActivity.correct + "\n");
+        sb.append("Jawaban benar: " + bindoActivity.correct + "\n");
         StringBuffer sb2 = new StringBuffer();
-        sb2.append("Jawaban salah: " + QuestionsActivity.wrong + "\n");
+        sb2.append("Jawaban salah: " + bindoActivity.wrong + "\n");
         StringBuffer sb3 = new StringBuffer();
-        sb3.append("Total Nilai: " + QuestionsActivity.correct + "\n");
+        sb3.append("Total Nilai: " + bindoActivity.correct + "\n");
         tv.setText(sb);
         tv2.setText(sb2);
         tv3.setText(sb3);
 
-        QuestionsActivity.correct=0;
-        QuestionsActivity.wrong=0;
+        bindoActivity.correct=0;
+        bindoActivity.wrong=0;
 
 
 

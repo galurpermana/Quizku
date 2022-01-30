@@ -4,32 +4,55 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logoquiz"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/NoBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuestionsActivity">
-            <intent-filter>
-                <action android:name="com.example.vikasojha.quizbee.QuestionsActivity" />
+        <activity
+            android:name=".QuestionsActivity"
+            android:theme="@style/Soal">
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
-        <activity android:name=".DeveloperActivity">
-            <intent-filter>
-                <action android:name="com.example.vikasojha.quizbee.DeveloperActivity" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ResultActivity"></activity>
+        <activity
+            android:name=".ResultActivity"
+            android:theme="@style/NoBar"
+            ></activity>
+        <activity
+            android:name=".metikActivity"
+            android:theme="@style/NoBar"
+            />
+
+        <activity
+            android:name=".ipaActivity"
+            android:theme="@style/NoBar"
+            />
+        <activity
+            android:name=".resultmetikActivity"
+            android:theme="@style/NoBar"
+            />
+        <activity
+            android:name=".resultipaActivity"
+            android:theme="@style/NoBar"
+            />
+        <activity
+            android:name=".bindoActivity"
+            android:theme="@style/NoBar"
+            />
+        <activity
+            android:name=".resultbindoActivity"
+            android:theme="@style/NoBar"
+            />
     </application>
 
 </manifest>

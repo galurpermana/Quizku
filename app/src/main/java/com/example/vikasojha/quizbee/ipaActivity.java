@@ -11,43 +11,43 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuestionsActivity extends AppCompatActivity {
+public class ipaActivity extends AppCompatActivity {
     TextView tv;
     Button submitbutton, quitbutton;
     RadioGroup radio_g;
     RadioButton rb1,rb2,rb3,rb4;
 
     String questions[] = {
-                            "Apa motto Kota Balikpapan?",
-                            "Apa nama latin beruang madu?",
-                            "Sumber air baku PDAM Kota Balikpapan adalah?",
-                            "Hutan lindung sungai Wain terletak di?",
-                            "Dimana letak waduk manggar?",
-                            "Hutan Kalimantan merupakan paru-paru dunia karena menghasilkan …",
-                            "Adipura adalah penghargaan pemerintah pusat yang diberikan kepada kota Balikpapan dalam bidang …",
-                            "Dibawah ini adalah cara pengolahan sampah, Kecuali?",
-                            "Selain dapat menciptakan udara segar, tumbuhan dapat menahan dan menyimpan ?",
-                            "Air yang bersih bisa kita peroleh dengan cara?"
-                         };
-    String answers[] = {"BERIMAN","Helarctos malaynus","Waduk Manggar","KM.15","KM.12","Oksigen","Kebersihan","Penghijauan","Air","Menggali tanah pada lapisan bagian bawah"};
+            "Hewan pemakan tumbuhan disebut hewan..",
+            "Untuk melakukan fotosintesis, tumbuhan membutuhkan..",
+            "Bagian tumbuhan yang berfungsi untuk menyerap air dan menyimpan cadangan makanan adalah..",
+            "Serangga yang menghasilkan madu adalah..",
+            "Bagian tumbuhan yang menghasilkan aroma harum adalah..",
+            "Saat malam, Pohon mengeluarkan?",
+            "Lidah kita gunakan untuk?",
+            "Mata kita berjumlah?",
+            "Andi mengambil buku menggunakan?",
+            "Suara yang keras bisa membuat telinga menjadi?"
+    };
+    String answers[] = {"Herbivora","Sinar matahari","Akar","Lebah","Bunga","Karbondioksida","Merasakan makanan","2","Tangan ","Ayam-Ikan-Kuda-Kambing"};
     String opt[] = {
-                    "BERSINAR","BERIMAN","BERSATU","BERSAMA",
-                    "Melursus ursinus","Elephas maximus","Ursus thibetanus","Helarctos malaynus",
-                    "Waduk Manggar","Laut","Sungai","Pantai",
-                    "KM.12","KM.15","Teritip","Kelurahan Telagasari",
-                    "KM.15","KM.23","KM.12","Kelurahan Prapatan",
-                    "Kayu","Rotan","Oksigen","Batu Bara",
-                    "Kenyamanan","Keanggunan","Keindahan","Kebersihan",
-                    "Daur ulang","Pengomposan","Penghijauan","Pembakaran",
-                    "Air","Oksigen","Emas","Karbondioksida",
-                     "Mengambil air di sungai","Menggali tanah pada lapisan bagian bawah"," Menggali pasir pada lapisan bawah tanah","Menggali tanah"
-                   };
+            "Omnivora","Insectivora","Herbivora","Karnivora",
+            "Udara","Pupuk","Air","Sinar matahari",
+            "Bunga","Akar","Daun","Batang",
+            "Lebah","Kupu-kupu","Lalat","Tawon",
+            "Bunga","Batang","Akar","Daun",
+            "Oksigen","Udara","Karbondioksida","Karbon",
+            "Merasakan makanan","Mengunyah makanan","Mencium makanan","Meraba makanan",
+            "3","4","2","1",
+            "Kaki","Tangan","Sikut","Lutut",
+            "Jernih","Bersih","Lembut","Sakit"
+    };
     int flag=0;
     public static int marks=0,correct=0,wrong=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questions);
+        setContentView(R.layout.activity_ipa);
 
         final TextView score = (TextView)findViewById(R.id.textView4);
         TextView textView=(TextView)findViewById(R.id.DispName);
@@ -57,7 +57,7 @@ public class QuestionsActivity extends AppCompatActivity {
         if (name.trim().equals(""))
             textView.setText("Halo User");
         else
-        textView.setText("Halo " + name);
+            textView.setText("Halo " + name);
 
         submitbutton=(Button)findViewById(R.id.button3);
         quitbutton=(Button)findViewById(R.id.buttonquit);
@@ -112,7 +112,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 else
                 {
                     marks=correct;
-                    Intent in = new Intent(getApplicationContext(),ResultActivity.class);
+                    Intent in = new Intent(getApplicationContext(),resultipaActivity.class);
                     startActivity(in);
                 }
                 radio_g.clearCheck();
@@ -122,10 +122,9 @@ public class QuestionsActivity extends AppCompatActivity {
         quitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),ResultActivity.class);
+                Intent intent=new Intent(getApplicationContext(),resultipaActivity.class);
                 startActivity(intent);
             }
         });
     }
-
 }
