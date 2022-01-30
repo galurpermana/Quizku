@@ -11,7 +11,8 @@
         <activity
             android:name="com.example.lomba.quizku.MainActivity"
             android:theme="@style/NoBar"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,38 +21,46 @@
         </activity>
         <activity
             android:name="com.example.lomba.quizku.QuestionsActivity"
-            android:theme="@style/Soal">
+            android:theme="@style/Soal"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <activity
             android:name="com.example.lomba.quizku.ResultActivity"
             android:theme="@style/NoBar"
+            android:screenOrientation="portrait"
             ></activity>
         <activity
             android:name="com.example.lomba.quizku.metikActivity"
             android:theme="@style/NoBar"
+            android:screenOrientation="portrait"
             />
 
         <activity
             android:name="com.example.lomba.quizku.ipaActivity"
             android:theme="@style/NoBar"
+            android:screenOrientation="portrait"
             />
         <activity
             android:name="com.example.lomba.quizku.resultmetikActivity"
             android:theme="@style/NoBar"
+            android:screenOrientation="portrait"
             />
         <activity
             android:name="com.example.lomba.quizku.resultipaActivity"
             android:theme="@style/NoBar"
+            android:screenOrientation="portrait"
             />
         <activity
             android:name="com.example.lomba.quizku.bindoActivity"
             android:theme="@style/NoBar"
+            android:screenOrientation="portrait"
             />
         <activity
             android:name="com.example.lomba.quizku.resultbindoActivity"
             android:theme="@style/NoBar"
+            android:screenOrientation="portrait"
             />
     </application>
 
