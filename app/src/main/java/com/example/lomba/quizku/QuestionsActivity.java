@@ -89,11 +89,11 @@ public class QuestionsActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), ansText, Toast.LENGTH_SHORT).show();
                 if(ansText.equals(answers[flag])) {
                     correct++;
-                    Toast.makeText(getApplicationContext(), "Wow keren kamu benar", Toast.LENGTH_SHORT).show();
+
                 }
                 else {
                     wrong++;
-                    Toast.makeText(getApplicationContext(), "Coba lagi ya", Toast.LENGTH_SHORT).show();
+
                 }
 
                 flag++;

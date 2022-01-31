@@ -29,7 +29,7 @@ public class ipaActivity extends AppCompatActivity {
             "Andi mengambil buku menggunakan?",
             "Suara yang keras bisa membuat telinga menjadi?"
     };
-    String answers[] = {"Herbivora","Sinar matahari","Akar","Lebah","Bunga","Karbondioksida","Merasakan makanan","2","Tangan ","Ayam-Ikan-Kuda-Kambing"};
+    String answers[] = {"Herbivora","Sinar matahari","Akar","Lebah","Bunga","Karbondioksida","Merasakan makanan","2","Tangan","Sakit"};
     String opt[] = {
             "Omnivora","Insectivora","Herbivora","Karnivora",
             "Udara","Pupuk","Air","Sinar matahari",
@@ -89,11 +89,11 @@ public class ipaActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), ansText, Toast.LENGTH_SHORT).show();
                 if(ansText.equals(answers[flag])) {
                     correct++;
-                    Toast.makeText(getApplicationContext(), "Wow keren kamu benar", Toast.LENGTH_SHORT).show();
+
                 }
                 else {
                     wrong++;
-                    Toast.makeText(getApplicationContext(), "Coba lagi ya", Toast.LENGTH_SHORT).show();
+
                 }
 
                 flag++;
